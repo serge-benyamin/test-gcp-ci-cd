@@ -10,7 +10,6 @@ steps:
     args:
     - |
         python -m pytest test
-    displayName: Bash Task running tests
 artifacts:
   objects:
     location: gs://pytest-bucket-artifacts/
