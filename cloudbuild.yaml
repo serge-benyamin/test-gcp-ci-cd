@@ -5,9 +5,9 @@ steps:
   - name: python
     entrypoint: python
     args: ["-m","pip","install","pytest","numpy","pandas"]
-  - name: python
-    entrypoint: python
-    args: ["-m","pytest","test"]
+  - bash: |
+      python -m pytest test
+    displayName: Bash Task running tests
 artifacts:
   objects:
     location: gs://pytest-bucket-artifacts/
