@@ -10,10 +10,10 @@ steps:
     args:
     - '-c'
     - |
-        ls -l
+          python -m pytest test
 artifacts:
   objects:
-    location: gs://pytest-bucket-artifacts/
+    location: gs://pytest-bucket-artifact/
     paths:
       - test_log.xml
   pythonPackages:
