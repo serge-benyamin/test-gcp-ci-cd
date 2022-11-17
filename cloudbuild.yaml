@@ -4,7 +4,14 @@ steps:
     args:  ["-m","pip","install","--upgrade","pip"]
   - name: python
     entrypoint: python
-    args: ["-m","pip","install","pytest","numpy","pandas"]
+    args: ["-m","pip","install","pipenv"]
+  - name: python
+    entrypoint: bash
+    args: 
+    - '-c'
+    - |
+          pipenv shell
+          pipenv install pytest pandas numpy
   - name: python
     entrypoint: python
     args: ["-m","pytest","test"]
