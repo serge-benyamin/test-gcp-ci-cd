@@ -6,15 +6,7 @@ steps:
     args:  ["-m","pip","install","--upgrade","pip"]
   - name: python
     entrypoint: python
-    args: ["-m","pip","install","pipenv"]
-  - name: bash
-    entrypoint: bash
-    args: 
-    - '-c'
-    - |
-          export PATH=/usr/local/bin/python:$PATH
-          pipenv shell
-          pipenv install pytest pandas numpy
+    args: ["-m","pip","install","pipenv","pytest","pandas","numpy"]
   - name: python
     entrypoint: python
     args: ["-m","pytest","test"]
