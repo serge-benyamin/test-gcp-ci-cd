@@ -10,6 +10,7 @@ steps:
     args: 
     - '-c'
     - |
+          SET PATH=/usr/local/bin/python;%PATH%
           pipenv shell
           pipenv install pytest pandas numpy
   - name: python
