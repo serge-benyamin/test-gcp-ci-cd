@@ -1,4 +1,4 @@
-image: docker.io/library/python:latest
+images: docker.io/library/python:latest
 steps:
   - name: python
     entrypoint: python
