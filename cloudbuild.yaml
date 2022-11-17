@@ -8,6 +8,7 @@ steps:
   - name: bash
     entrypoint: bash
     args:
+    - '-c'
     - |
         ls -l
 artifacts:
