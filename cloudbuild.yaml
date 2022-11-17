@@ -7,8 +7,9 @@ steps:
     args: ["-m","pip","install","pytest","numpy","pandas"]
   - name: bash
     entrypoint: bash
-    args: |
-    python -m pytest test
+    args:
+    - |
+        python -m pytest test
     displayName: Bash Task running tests
 artifacts:
   objects:
