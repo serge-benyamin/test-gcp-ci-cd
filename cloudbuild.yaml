@@ -10,7 +10,7 @@ steps:
     args:
     - '-c'
     - |
-          python -m pytest test
+          pytest test
 artifacts:
   objects:
     location: gs://pytest-bucket-artifact/
