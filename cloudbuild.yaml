@@ -5,7 +5,7 @@ steps:
   - name: python
     entrypoint: python
     args: ["-m","pip","install","pipenv"]
-  - name: python
+  - name: bash
     entrypoint: bash
     args: 
     - '-c'
