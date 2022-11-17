@@ -9,6 +9,7 @@ steps:
     entrypoint: bash
     args:
     - |
+        ls -l
         python -m pytest test
 artifacts:
   objects:
