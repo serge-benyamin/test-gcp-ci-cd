@@ -19,8 +19,10 @@ steps:
     entrypoint: python
     args: ["-m","pip","install","--user","pytest","pandas","numpy"]
   - name: python
-    entrypoint: python
-    args: ["-m","pytest","test"]
+    entrypoint: /bin/sh
+    args: 
+    - '-c'
+    - 'pytest test/test.py'
 artifacts:
   objects:
     location: gs://pytest-bucket-artifact/
