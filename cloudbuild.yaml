@@ -1,5 +1,3 @@
-images: 
-- docker.io/library/python:latest
 steps:
   - name: python
     entrypoint: python
@@ -7,6 +5,9 @@ steps:
   - name: python
     entrypoint: python
     args: ["-m","pip","install","--user","virtualenv"]
+   - name: python
+    entrypoint: python
+    args: ["-m","venv","/usr/local/bin/virtualenv"]
 artifacts:
   objects:
     location: gs://pytest-bucket-artifact/
