@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61.0", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "test_package"
+version = "1.0"
+authors = [
+  { name="test", email="test" },
+]
+dependencies=[
+"pandas",
+"numpy"]
+description = "A package for testing cloud build CI CD"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools.packages.find]
+exclude=["test"]
