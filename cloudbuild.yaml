@@ -5,7 +5,7 @@ steps:
   - name: python
     entrypoint: python
     args: ["-m","pip","install","--user","virtualenv"]
-   - name: python
+  - name: python
     entrypoint: python
     args: ["-m","venv","/usr/local/bin/virtualenv"]
 artifacts:
