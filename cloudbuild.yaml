@@ -13,7 +13,7 @@ steps:
     args: 
     - '-c'
     - |
-          source /usr/local/bin/virtualenv/bin/activate
+          ls -l
 artifacts:
   objects:
     location: gs://pytest-bucket-artifact/
