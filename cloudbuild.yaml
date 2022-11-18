@@ -4,10 +4,23 @@ steps:
     args:  ["-m","pip","install","--upgrade","pip"]
   - name: python
     entrypoint: python
+    args: ["-m","pip","install","--user","virtualenv"]
+  - name: python
+    entrypoint: python
+    args: ["-m","venv","./virtualenv"]
+  - name: bash
+    entrypoint: bash
+    args: 
+    - '-c'
+    - |
+          source ./virtualenv/bin/activate
+          ls -l
+  - name: python
+    entrypoint: python
     args: ["-m","pip","install","--user","pytest","pandas","numpy"]
   - name: python
     entrypoint: python
-    args: ["-m","pytest","test"]
+    args: ["-m","pytest","../../../test"]
 artifacts:
   objects:
     location: gs://pytest-bucket-artifact/
