@@ -18,9 +18,13 @@ steps:
   - name: python
     entrypoint: python
     args: ["-m","pip","install","--user","pytest","pandas","numpy"]
-  - name: python
-    entrypoint: python
-    args: ["-m","pytest","../../../test"]
+  - name: bash
+    entrypoint: bash
+    args: 
+    - '-c'
+    - |
+          ls -l
+          pytest test
 artifacts:
   objects:
     location: gs://pytest-bucket-artifact/
