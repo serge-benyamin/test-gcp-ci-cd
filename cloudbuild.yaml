@@ -16,7 +16,7 @@ steps:
           source ./virtualenv/bin/activate
   - name: python
     entrypoint: python
-    args: ["-m","pip","install","pytest","pandas","numpy"]
+    args: ["-m","pip","install","--user","pytest","pandas","numpy"]
   - name: python
     entrypoint: python
     args: ["-m","pytest","test"]
