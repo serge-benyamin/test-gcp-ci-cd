@@ -23,8 +23,8 @@ steps:
     args: 
     - '-c'
     - |
-          ls -l ./virtualenv/bin
-          ./virtualenv/bin/python3.11 -m pytest test
+          ls  ./virtualenv/bin
+          ~/virtualenv/bin/python3.11 -m pytest test
 artifacts:
   objects:
     location: gs://pytest-bucket-artifact/
