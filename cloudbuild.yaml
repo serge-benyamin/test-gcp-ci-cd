@@ -24,7 +24,7 @@ steps:
     - '-c'
     - |
           ls  ./virtualenv/bin
-          ~/virtualenv/bin/python3.11 -m pytest test
+          ./virtualenv/bin/python3.11.exe -m pytest test
 artifacts:
   objects:
     location: gs://pytest-bucket-artifact/
