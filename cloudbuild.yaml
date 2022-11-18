@@ -18,13 +18,9 @@ steps:
   - name: python
     entrypoint: python
     args: ["-m","pip","install","--user","pytest","pandas","numpy"]
-  - name: bash
-    entrypoint: bash
-    args: 
-    - '-c'
-    - |
-          source ./virtualenv/bin/activate
-          python -m pytest test
+- name: python
+    entrypoint: python
+    args: ["-m","pytest","test"]
 artifacts:
   objects:
     location: gs://pytest-bucket-artifact/
