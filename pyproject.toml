@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "test_package"
 version = "1.0"
 authors = [
-  { name="test", email="test" },
+  { name="test", email="test@gmail.com" },
 ]
 dependencies=[
 "pandas",
