@@ -7,13 +7,14 @@ steps:
     args: ["-m","pip","install","--user","virtualenv"]
   - name: python
     entrypoint: python
-    args: ["-m","venv","/usr/local/bin/virtualenv"]
+    args: ["-m","venv","./virtualenv"]
   - name : bash
     entrypoint: bash
     args: 
     - '-c'
     - |
           ls -l
+          source ./virtualenv/bin/activate
 artifacts:
   objects:
     location: gs://pytest-bucket-artifact/
