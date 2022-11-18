@@ -4,16 +4,18 @@ steps:
   - name: python
     entrypoint: python
     args:  ["-m","pip","install","--upgrade","pip"]
-  - name: bash
+  - name: python
+    entrypoint: python
+    args:  ["-m","pip","install","--user","virtualenv"]
+ - name: python
+    entrypoint: python
+    args:  ["-m","venv","/usr/local/bin/virtualenv"]
+ - name: bash
     entrypoint: bash
-    args: 
-    - '-c'
-    - |
-          export PATH="$PATH:/usr/local/bin/python"
-          python -m pip install --user virtualenv
-          python -m venv /usr/local/bin/virtualenv
-          source /usr/local/bin/virtualenv/bin/activate
-          pip install pytest pandas numpy
+    args:  source /usr/local/bin/virtualenv/bin/activate
+  - name: python
+    entrypoint: python
+    args:  ["-m","pip","install","pytest","pandas","numpy"]
   - name: python
     entrypoint: python
     args: ["-m","pytest","test"]
