@@ -19,10 +19,17 @@ steps:
     entrypoint: python
     args: ["-m","pip","install","--user","pytest","pandas","numpy"]
   - name: python
+    id: Tests
     entrypoint: /bin/sh
     args: 
     - '-c'
     - 'python -m pytest test/test.py --junitxml=test_log.xml'
+  - name: python
+    id: Build
+    entrypoint: /bin/sh
+    args:
+    - 'c'
+    - 'python -m pip install --upgrade build && python -m build'
 artifacts:
   objects:
     location: gs://pytest-bucket-artifact/
