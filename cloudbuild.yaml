@@ -13,7 +13,6 @@ steps:
     args: 
     - '-c'
     - |
-          ls -l
           source ./virtualenv/bin/activate
   - name: python
     entrypoint: python
