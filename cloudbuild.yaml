@@ -4,6 +4,9 @@ steps:
   - name: python
     entrypoint: python
     args:  ["-m","pip","install","--upgrade","pip"]
+  - name: python
+    entrypoint: python
+    args: ["-m","pip","install","--user","virtualenv"]
 artifacts:
   objects:
     location: gs://pytest-bucket-artifact/
