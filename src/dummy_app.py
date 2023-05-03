@@ -2,6 +2,6 @@ import numpy as np
 import pandas as pd 
 
 def square(x):
-    #comm
+    #comms
     return x * x
 
